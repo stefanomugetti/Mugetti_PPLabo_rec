@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parcial 1</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./estilos.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="nav">
+        <img src="./assets/logo.png" class="logo"></img>
+            <ul id="botonesHeader">
+
+                <li> <a href="anuncios.html" class="nav-enlace nav-desaparece">Inicio</a></li>
+                <li> <a href="anuncios.html" class="nav-enlace nav-desaparece">Nosotros</a></li>
+                <li> <a href="anuncios.html" class="nav-enlace nav-desaparece">Servicios</a></li>
+                <li> <a href="anuncios.html" class="nav-enlace nav-desaparece">Contacto</a></li>
+                
+            </ul>
+
+        </nav>
+    </header>
+<div class="divAll">
+
+
+
+    <div class="banner"></div>
+    <div class="principal" id="divPrincipal">
+        <form name="formulario">
+            <fieldset class="fsFormulario">
+                <legend class="tituloFormulario" >Informacion Del Anuncio</legend>
+                <div>
+                    <label for="" class="lblDatos" >TITULO:</label>
+                </div>
+                    <input type="text" class="CamposDatos" name="Titulo" placeholder="Titulo" id="txtTitulo" required>
+                <div>
+                    <br>
+                    <label for="" class="lblDatos">TRANSACCION:</label>
+                </div>
+                <input type="radio" name="Transaccion" id="transaccion" value="Venta" checked>Venta
+                <input type="radio" name="Transaccion" id="transaccion" value="Alquiler">Alquiler
+                <br>
+                <div>
+                    <br>
+                    <div>
+                        <br>
+                        <label for="" class="lblDatos">CARACTERISTICAS:</label>
+                    </div>
+                    <input type="checkbox" name="chkTurbo" id="chkTurbo" value="Turbo" >Turbo
+                    <input type="checkbox" name="chkAleron" id="chkAleron" value="Aleron" >Aleron
+                    <input type="checkbox" name="chkNeon" id="chkNeon" value="Neon" >Neon
+                    <br>
+                    <br>
+                    <label for="" class="lblDatos">DESCRIPCION:</label>
+                </div>
+                <input type="text" class="CamposDatos" name="Descripcion" placeholder="Descripcion" id="txtDescripcion" required>
+                <div>
+                    <br>
+                    <label for="" class="lblDatos">PRECIO:</label>
+                </div>
+                <input type="number" class="CamposDatos" name="Precio" placeholder="Precio" id="txtPrecio" required>
+                <div>
+                    <br>
+                    <img src="./assets/potencia.png" width="30px" class="images" style="float: left;" alt="" />
+                    <input type="number" class="CamposDatosImagen" name="Potencia" placeholder="Potencia" id="txtPotencia" required>
+                </div>
+                <div>
+                    <br>
+                    <img src="./assets/kilometros.png" width="30px" class="images"   style="float: left;" alt="" />
+                    <input type="number" class="CamposDatosImagen" name="Kms" placeholder="Kms" id="txtKms" required>
+                </div>
+                <div>
+                    <br>
+                    <img src="./assets/puerta.jpg" width="5%" background-color="#cf0f0f"  style="float: left;" alt="" />
+                    <input type="number" class="CamposDatosImagen" name="Puertas" placeholder="Puertas" id="txtPuertas" required>
+                </div>
+
+                <div >
+                    <br>
+                    <input type="hidden" name="id" value="">
+                    <input type="submit" class="btnGuardar" value="Guardar">
+                </div>
+            </fieldset>
+        </form>
+        <br>
+        <br>
+    </div>
+        <center>
+            <div class="spinner" id="divSpinner"></div>
+        </center>
+        
+        <center>
+        <div class="botones" id="botonera" hidden>
+            <button type="button" class="btnEliminar"  id="btnEliminar">Eliminar</button>
+            <button type="button" class="btnCancelar" id="btnCancelar">Cancelar</button>
+            <button type="button" class="btnModificar" id="btnModificar">Modificar</button>
+        </div>
+        <br>
+        <div>
+            <main class="tabla">
+                <section hidden class="table-container" id="table-container" ></section>
+            </main>
+            <br><br><br>
+        </div>
+    </center>
+</div>
+        <footer>
+            <div class="box footerNav">
+                <div class="linksFooter">Nosotros</div>
+                <div class="linksFooter">Anuncios</div>
+                <div class="linksFooter">Blog</div>
+                <div class="linksFooter">Contacto</div>
+            </div>   
+        </footer>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="./scripts/app.js" type="module"></script>
+</body>
+
+</html>
